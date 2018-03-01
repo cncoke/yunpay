@@ -1,4 +1,4 @@
-package com.yc.examination;
+package com.yc.ledi2018;
 
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -10,6 +10,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.mob.paysdk.MobPayAPI;
 import com.mob.paysdk.OnPayListener;
@@ -53,11 +54,14 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        
 
     }
 
+
     private void onPay() {
 
+        tv_result.setText("");
 
         PayOrder order = new PayOrder();
         order.setOrderNo("PAY" + System.currentTimeMillis());
